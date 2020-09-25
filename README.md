@@ -9,4 +9,3 @@
 [npm-url]: https://npmjs.org/package/eslint-config-emochan
 
 An ESLint Config for emochan.
-
