@@ -1,0 +1,55 @@
+---
+# https://prettier.io/docs/en/options.html
+
+parser: babel
+
+printWidth: 120
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: true
+quoteProps: as-needed
+jsxSingleQuote: false
+trailingComma: all
+bracketSpacing: true
+jsxBracketSameLine: false
+arrowParens: avoid
+endOfLine: lf
+
+requirePragma: false
+insertPragma: false
+
+# Markdown
+proseWrap: preserve
+
+# HTML
+htmlWhitespaceSensitivity: css
+
+overrides:
+  - files:
+      - '*.ts'
+      - '*.tsx'
+    options:
+      parser: typescript
+  - files: '*.json'
+    options:
+      parser: json
+  - files:
+      - '*.md'
+      - '*.markdown'
+    options:
+      parser: markdown
+  - files: '*.css'
+    options:
+      parser: css
+  - files: '*.scss'
+    options:
+      parser: scss
+  - files: '*.html'
+    options:
+      parser: html
+  - files:
+      - '*.yml'
+      - '*.yaml'
+    options:
+      parser: yaml
