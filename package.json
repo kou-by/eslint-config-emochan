@@ -12,15 +12,17 @@
     "coverage": "jest --coverage",
     "lint": "eslint example --ext .js,.jsx,.ts,.tsx"
   },
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
-    "eslint": "^7.7.0",
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier-eslint": "^11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
     "jest": "^26.4.1",
     "prettier": "^2.0.5",
-    "prettier-eslint": "^11.0.0",
     "ts-jest": "^26.2.0",
     "typescript": "^4.0.3"
   }
