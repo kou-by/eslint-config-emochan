@@ -9,3 +9,19 @@
 [npm-url]: https://npmjs.org/package/eslint-config-emochan
 
 An ESLint Config for emochan.
+
+## Install
+
+Install `eslint-config-emochan`.
+
+```
+npm install --save-dev eslint-config-emochan
+```
+
+Then, add eslint-config-emochan to your `.eslintrc` file.
+
+```json
+{
+  "extends": "emochan"
+}
+```
