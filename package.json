@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-emochan",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "main": "index.js",
   "repository": "https://github.com/kou-by/eslint-config-emochan",
   "bugs": "https://github.com/kou-by/eslint-config-emochan/issues",
