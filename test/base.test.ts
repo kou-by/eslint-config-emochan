@@ -3,12 +3,12 @@ import { CLIEngine } from 'eslint';
 import * as config from '../index';
 
 function isObject(obj: unknown) {
-  return typeof obj === 'object' && obj !== null
+  return typeof obj === 'object' && obj !== null;
 }
 
 const cli = new CLIEngine({
   useEslintrc: false,
-  configFile: '.eslintrc.json'
+  configFile: '.eslintrc.json',
 });
 
 const rightSample = readFileSync('example/something-right.ts', 'utf-8');
@@ -25,8 +25,8 @@ describe('test base of settings', () => {
 
 describe('loading config in eslint', () => {
   test('returns errors & warning', () => {
-    const expectedErrors = 3;
-    const expectedWarns = 3;
+    const expectedErrors = 5;
+    const expectedWarns = 4;
     const executed = cli.executeOnText(wrongSample);
 
     expect(executed.errorCount).toBe(expectedErrors);
