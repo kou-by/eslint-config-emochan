@@ -61,6 +61,7 @@
       "ExportDeclaration": { "multiline": true }
     }],
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": "error"
+    "@typescript-eslint/no-shadow": "error",
+    "consistent-return": "off"
   }
 }
