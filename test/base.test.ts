@@ -1,14 +1,14 @@
 import { readFileSync } from 'fs';
-import { CLIEngine } from 'eslint';
+import { ESLint } from 'eslint';
 import * as config from '../index';
 
 function isObject(obj: unknown) {
   return typeof obj === 'object' && obj !== null;
 }
 
-const cli = new CLIEngine({
+const cli = new ESLint({
   useEslintrc: false,
-  configFile: '.eslintrc.json',
+  overrideConfigFile: '.eslintrc.json',
 });
 
 const rightSample = readFileSync('example/something-right.ts', 'utf-8');
@@ -24,20 +24,20 @@ describe('test base of settings', () => {
 });
 
 describe('loading config in eslint', () => {
-  test('returns errors & warning', () => {
-    const expectedErrors = 5;
-    const expectedWarns = 4;
-    const executed = cli.executeOnText(wrongSample);
+  test('returns errors & warning', async () => {
+    const expectedErrors = 6;
+    const expectedWarns = 2;
+    const executed = await cli.lintText(wrongSample);
 
-    expect(executed.errorCount).toBe(expectedErrors);
-    expect(executed.warningCount).toBe(expectedWarns);
+    expect(executed[0].errorCount).toBe(expectedErrors);
+    expect(executed[0].warningCount).toBe(expectedWarns);
   });
 
-  test('returns no error & no warning', () => {
+  test('returns no error & no warning', async () => {
     const noError = 0;
-    const executed = cli.executeOnText(rightSample);
+    const executed = await cli.lintText(rightSample);
 
-    expect(executed.errorCount).toBe(noError);
-    expect(executed.warningCount).toBe(noError);
+    expect(executed[0].errorCount).toBe(noError);
+    expect(executed[0].warningCount).toBe(noError);
   });
 });

@@ -16,7 +16,7 @@
       }
     },
     "react": {
-      "version": "17.0"
+      "version": "18.0"
     }
   },
   "plugins": [
@@ -42,6 +42,8 @@
     "react/jsx-props-no-spreading": ["off"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/require-default-props": 0,
+    "react/no-unused-prop-types": 0,
     "no-return-assign": ["off"],
     "import/prefer-default-export": "off",
     "import/extensions": [
